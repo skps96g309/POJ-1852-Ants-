@@ -2,18 +2,18 @@
 #include<stdlib.h>
 #define MAXn 1000000 
 
-int L , n , ansmin , ansmax , ant_pos[MAXn];  /*L¬°¬ñ¤l(pole)ªºªø«×¡An¬°¿ÂÃÆªº­Ó¼Æ¡Aansmin¬O³Ì«á©Ò»İªá±o³Ì¤Ö®É¶¡¡Aansmax«h¬O³Ì«á©Ò»İªáªº³Ì¦h®É¶¡*/ 
-/*Find_min_times¨ç¼Æ¬O¥Î¨Ó§äansminªº­È¡A¨Ã¦C¦L¥X¨Ó¡C*/ 
+int L , n , ansmin , ansmax , ant_pos[MAXn];  /*Lç‚ºç«¿å­(pole)çš„é•·åº¦ï¼Œnç‚ºèèŸ»çš„å€‹æ•¸ï¼Œansminæ˜¯æœ€å¾Œæ‰€éœ€èŠ±å¾—æœ€å°‘æ™‚é–“ï¼Œansmaxå‰‡æ˜¯æœ€å¾Œæ‰€éœ€èŠ±çš„æœ€å¤šæ™‚é–“*/ 
+/*Find_min_timeså‡½æ•¸æ˜¯ç”¨ä¾†æ‰¾ansminçš„å€¼ï¼Œä¸¦åˆ—å°å‡ºä¾†ã€‚*/ 
 void Find_min_time(void) 
 {
     
     int min;
-    ansmin = -1;  /*ªì©l¤Æansmin*/ 
+    ansmin = -1;  /*åˆå§‹åŒ–ansmin*/ 
     for(int i = 0 ; i < n ; i++) 
     {
-            min = ( (ant_pos[i]) < (L - ant_pos[i]) ? (ant_pos[i]):(L - ant_pos[i]) );  /*¨C°¦¿ÂÃÆ³£¦³¨â­Ó¤è¦V¥i¥H¨«¡A¨ú©Ò¯Ó®É¶¡³Ì¤Öªºµ¹min*/ 
-            if(min > ansmin)       /*¨C°¦¿ÂÃÆ³£¦³¦U¦Û©Òªáªº³Ì¤Ö®É¶¡(min)¡A¦ı¬O¤@©w­n¨úmin³Ì¤jªº¿ÂÃÆ¬°ansmin¡A¦]¬°¨ä¥L¿ÂÃÆ­nµ¥³o°¦¿ÂÃÆ¶]§¹¤~ºâ¥ş³£±¼¸¨*/ 
-                   ansmin = min;
+            min = ( (ant_pos[i]) < (L - ant_pos[i]) ? (ant_pos[i]):(L - ant_pos[i]) );  /*æ¯éš»èèŸ»éƒ½æœ‰å…©å€‹æ–¹å‘å¯ä»¥èµ°ï¼Œå–æ‰€è€—æ™‚é–“æœ€å°‘çš„çµ¦min*/ 
+            if(min > ansmin)       /*æ¯éš»èèŸ»éƒ½æœ‰å„è‡ªæ‰€èŠ±çš„æœ€å°‘æ™‚é–“(min)ï¼Œä½†æ˜¯ä¸€å®šè¦å–minæœ€å¤§çš„èèŸ»ç‚ºansminï¼Œå› ç‚ºå…¶ä»–èèŸ»è¦ç­‰é€™éš»èèŸ»è·‘å®Œæ‰ç®—å…¨éƒ½æ‰è½*/ 
+                   ansmin = min;   /*yooooooooooooooooooooooo*/
     }
     printf("%d ",ansmin);
 }
@@ -34,7 +34,7 @@ void Find_max_time(void)
 
 int main(void)
 {
-    int cases;  /*cases¬O±ı°õ¦æªº®×¨Ò¼Æ¥Ø*/ 
+    int cases;  /*casesæ˜¯æ¬²åŸ·è¡Œçš„æ¡ˆä¾‹æ•¸ç›®*/ 
     scanf("%d",&cases);
     while(cases--)
     {              
